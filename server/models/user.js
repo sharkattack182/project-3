@@ -10,8 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
 
   User.associate = function (models) {
-    // associations can be defined here
-    //associate a user with the cart user.hasOne(models.cart)
+    User.hasOne(models.cart)
   };
 
   User.prototype.comparePassword = function (challenge) {
