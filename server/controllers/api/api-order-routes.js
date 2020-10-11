@@ -1,6 +1,56 @@
 const apiOrderRoutes = require("express").Router();
 const db = require('../../models');
+const { JWTVerifier } = require('../../lib/passport');
 
+//shows us all the orders
+apiOrderRoutes.get("/", JWTVerifier, function (req, res) {
+    db.Order.findAll({
+        where: {
+            UserId: req.user.id
+        }
+    }).then(function(results) {
+        res.json(results)
+    }).catch(err => {
+        console.log(err);
+        res.json(err);
+    })
+    
+});
+
+
+//get the last order and the products associated with the order by the user that is currently logged in
+apiOrderRoutes.get("/latest", JWTVerifier, function (req, res) {
+
+    db.Order.findAll({
+        where: {
+            UserId: req.user.id
+        },
+        order: [['createdAt', 'DESC']],
+        limit: 1,
+        include: {
+            model: db.Product,
+            through: { attributes: [] }
+        }
+    }).then(data => {
+        res.json(data)
+    }).catch(err => {
+        console.log(err)
+        res.json(err)
+    })
+
+
+
+})
+
+//post for new order 
+//update that adds the order 
+//update that takes a product off the order 
+
+
+
+
+
+//creates an order for a specific user
 // apiOrderRoutes.post("/api/orders", async (req, res) => {
 //     if (
 //         !req.body.name ||
