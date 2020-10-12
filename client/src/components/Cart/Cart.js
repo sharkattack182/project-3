@@ -18,7 +18,7 @@ export const Cart = () => {
             return targetId === val.id
         })
 
-        const mapOfCart = cart.map(val => {
+        const mapOfCart1 = cart.map(val => {
 
             if (val.id === targetId) {
 
@@ -36,7 +36,7 @@ export const Cart = () => {
             }
             return val
         })
-        setCart(() => mapOfCart)
+        setCart(() => mapOfCart1)
     }
 
     const decrementCart = (event) => {
@@ -50,7 +50,7 @@ export const Cart = () => {
 
         if (filterCartByID3[0].quantity > 0) {
 
-            const mapOfCart = cart.map(val => {
+            const mapOfCart2 = cart.map(val => {
 
                 if (val.id === targetId) {
 
@@ -69,7 +69,7 @@ export const Cart = () => {
                 }
                 return val
             })
-            setCart(() => mapOfCart)
+            setCart(() => mapOfCart2)
         }
     }
 
