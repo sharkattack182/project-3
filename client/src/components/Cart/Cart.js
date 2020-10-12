@@ -72,10 +72,10 @@ export const Cart = (props) => {
       ) : (
           <div className="cart cart-header">
 
-            You have {cart.reduce((acc, curr) => acc + curr.quantity, 0)} item(s) in the cart{" "}
+            <h5>You have {cart.reduce((acc, curr) => acc + curr.quantity, 0)} item(s) in the cart{" "}</h5>
             {cart.map((item, i) => (
               <p key={i + '-key'}>
-               <span> <img src={item.image}/> {item.name} {item.quantity} x ${item.price.toFixed(2)}</span>
+               <span className="span1"> <img src={item.image}/> {item.name} {item.quantity} x ${item.price.toFixed(2)} </span>
                 <button onClick={() => modifyCart(item.id, 1)}>
                   <i className="fas fa-plus"></i>
                 </button>

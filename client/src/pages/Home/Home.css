@@ -23,3 +23,14 @@ h1 i {
 
 /* Card */
 
+/* .card-title {
+    font-size: 150px !important;
+    margin-top: 80px;
+    color: #aaa9a9cb !important;
+    text-shadow: 2px 2px #000;
+} */
+
+.category-card {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

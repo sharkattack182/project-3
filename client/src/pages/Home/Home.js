@@ -4,6 +4,8 @@ import CSS from '../../pages/Home/Home.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Img1 from './imgs/mask1.jpg';
+import Img2 from './imgs/sanitizer2.jpg';
 
 
 class HomePage extends Component {
@@ -22,10 +24,27 @@ class HomePage extends Component {
         </Row>
         <Row>
           <Col md={10} className="center">
-
+            <div className="card bg-dark text-white">
+              <img src={Img1} className="card-img" alt="..." />
+              <div className="card-img-overlay">
+                <h5 className="card-title">Masks</h5>
+                <p className="card-text">We supply masks of all kinds. From n95 masks to gators and face shields.All of our products are quality tested and approved by the CDC.</p>
+                <p className="card-text">Last updated 3 mins ago</p>
+              </div>
+            </div>
           </Col>
-
-
+        </Row>
+        <Row>
+          <Col md={10} className="center">
+            <div className="card category-card bg-dark text-white">
+              <img src={Img2} className="card-img" alt="..." />
+              <div className="card-img-overlay">
+                <h5 className="card-title">Sanitizer</h5>
+                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p className="card-text">Last updated 3 mins ago</p>
+              </div>
+            </div>
+          </Col>
         </Row>
       </div>
     );

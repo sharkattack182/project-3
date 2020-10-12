@@ -18,29 +18,31 @@ import { TshirtList } from '../../components/Tshirt/TshirtList';
 // import App from '../../components/App/App';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class Shop extends Component {
-    static contextType = AuthContext;
+  static contextType = AuthContext;
 
-    state = {
-      isLoading: true,
-      error: ""
-    }
-  
-    componentDidMount() {
-      API.Secrets.getAll(this.context.authToken)
-        .then(response => response.data)
-        .then(secrets => this.setState({ secrets }))
-        .catch(err => {
-          if (err.response.status === 401) {
-            return this.setState({ error: "Unauthorized. Please login." });
-          }
-  
-          console.log(err);
-        })
-        .finally(() => this.setState({ isLoading: false }));
-    }
-  
+  state = {
+    isLoading: true,
+    error: ""
+  }
+
+  componentDidMount() {
+    API.Secrets.getAll(this.context.authToken)
+      .then(response => response.data)
+      .then(secrets => this.setState({ secrets }))
+      .catch(err => {
+        if (err.response.status === 401) {
+          return this.setState({ error: "Unauthorized. Please login." });
+        }
+
+        console.log(err);
+      })
+      .finally(() => this.setState({ isLoading: false }));
+  }
+
 
   render() {
     return (
@@ -53,17 +55,26 @@ class Shop extends Component {
           {/* <hr className="my-4" /> */}
           <p>Take a look at our inventory below.</p>
           <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-          
+
         </div>
 
         {/* <row> */}
 
-          <CartProvider>
-            <div>
+        <CartProvider>
+          <div>
+            <Row>
+            <Col md={8}>
+            <TshirtList />
+            </Col>
+            <Col md={4}>
+            <div className="blue1">
               <Cart />
-              <TshirtList />
             </div>
-          </CartProvider>
+              
+            </Col>
+            </Row>
+          </div>
+        </CartProvider>
         {/* </row> */}
       </div>
     );
