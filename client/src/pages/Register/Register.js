@@ -19,13 +19,17 @@ class Register extends Component {
         this.setState({redirectToReferrer: true})
         return response.data
       })
-      .then(user => console.log("user", user))
+      // .then(response => 
+      //   response.data
+      // )
+      .then(user => console.log(user))
       .catch(err => this.setState({ error: err.message })) 
   }
 
   render() {
 
     const { from } = this.props.location.state || { from: { pathname: "/login" } };
+    // const { from } = this.props.location.state || { from: { pathname: "/secret" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
