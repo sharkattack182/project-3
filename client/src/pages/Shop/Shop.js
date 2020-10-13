@@ -48,17 +48,10 @@ class Shop extends Component {
     return (
       <div>
 
-        <div className="jumbotron text-left">
-          <h4 className="display">Personal protective equipment</h4>
-          <h4>delivery to your doorstep</h4>
-          {/* <img className="jumbotronImg" src="https://fontmeme.com/permalink/201007/197bd622ace3df16555e2fc9b07a4ceb.png" /> */}
-          {/* <hr className="my-4" /> */}
-          <p>Take a look at our inventory below.</p>
-          <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-
+        <div className="jumbotron text-center">
+        <h1>Our Products <i class="fas fa-shield-virus"></i></h1>
+            <p className="trust max-width">Please browse our exclusive products below. Just press checkout whenever youre done shopping. </p>
         </div>
-
-        {/* <row> */}
 
         <CartProvider>
           <div>

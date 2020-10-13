@@ -23,15 +23,14 @@ function About() {
 
         <>
         
-        <div className="jumbotron text-left"></div>
+        <div className="jumbotron text-center">
+        <h1 className="team">Meet the Team <i class="fas fa-shield-virus"></i></h1>
+        <p id="about-us" className="max-width">We are a team of UNC-Charlotte full stack developer students with a passion for coding. We have collaborated to create a fully operational eCommerce site with a working shopping cart that will fulfill all your PPE needs. Please let us know you stopped by and feel free to connect with us via our individual profiles below.</p>
+        </div>
         
 
 
           <Container>
-            <Row >
-            <h2 className="team">Meet the Team <i class="fas fa-shield-virus"></i></h2><br></br><br></br>
-            <p id="about-us" >We are a team of UNC-Charlotte full stack developer students with a passion for coding. We have collaborated to create a fully operational eCommerce site with a working shopping cart that will fulfill all your PPE needs. Please let us know you stopped by and feel free to connect with us via our individual profiles below.</p>
-            </Row>
                   <Row>
                     <Col xs={3} md={3}>
                     <div className="margin">

@@ -16,11 +16,11 @@
 
 
 #about-us {
-    text-align: left;
     font-size: 25px;    
-    color:  #aaa9a9cb;
+    color:  #5e5e5ecb;
     margin-bottom: 70px;
-    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
@@ -38,6 +38,7 @@ p {
 }
 
 .margin {
+    margin-top: 50px;
     margin-bottom: 200px;
     font-size: 22px;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
