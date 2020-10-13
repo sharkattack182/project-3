@@ -17,14 +17,14 @@ function Testimonials() {
 
   return (
     <>
-      <div className="jumbotron text-left">
-
+      <div className="jumbotron text-center">
+<h1 class="testimonials">Testimonials <i class="far fa-newspaper"></i></h1>
+      <p className= "trust" >Dont just take our word for it... <br/> Here are some reviews from our loyal customers</p>
 
       </div>
-      <h2 class="testimonials">Testimonials <i class="far fa-newspaper"></i></h2>
-      <p className= "trust" >Dont just take our word for it... <br/> Here are some reviews from our loyal customers</p>
-      <Container>
       
+      <Container>
+      <br/>
         <div className="card card4 mb-3">
           <div className="row no-gutters">
             <div className="col-md-4">

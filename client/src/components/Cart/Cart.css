@@ -1,0 +1,248 @@
+.quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 40px;
+    height: 30px;
+    font-size: 19px;
+    color: #43484D;
+    font-weight: 300;
+    padding-bottom: 1px !important;
+  }
+
+  .minus-btn{
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 0px 6px 6px 0px !important;
+    border: none;
+    cursor: pointer;
+    margin: 0 !important;
+  }
+
+  .plus-btn{
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px 0px 0px 6px !important;
+    border: none;
+    cursor: pointer;
+  }
+
+  .description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+  }
+   
+  .description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+  }
+
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+
+  .cartSpan {
+      color: white !important;
+      font-size: 25px !important;
+  }
+
+
+  .blue1 {
+    background-color: #011586;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    margin-bottom: 150px;
+    border-color: #c0c0c0cb;
+    border-width: 5px;
+    border-style: solid;
+    color: white;
+    margin-left: auto;
+    margin-right: 75px;
+}
+
+.blue1 p {
+    color: white;
+    
+}
+.blue1 h5 {
+    margin-bottom: 50px;
+    font-size: large;
+}
+
+.blue1 button {
+    margin-left: 5px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+
+.col-12 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card1 {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #011586;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
+    padding: 0;
+    /* opacity: 0.5; */
+}
+/* .card1:hover {
+  opacity: 1.0;
+  transform: scale(1.1);
+} */
+
+.card1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ec8430;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.card1:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.card1:after {
+    content: "PPE";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+
+}
+
+.card1 .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.card1:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.card1 .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    width: 270px;
+}
+
+.card1 .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.card1:hover .contentBx {
+    height: 210px;
+}
+
+.card1 .contentBx h4 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+/* .card1:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+} */
+
+.card1:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+
+.card1 .contentBx button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.card1:hover .contentBx button {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .2s;
+} 
+
+.card1:hover .contentBx p {
+  opacity: 1;
+  display: block;
+  color: white;
+  transform: translateY(0px);
+  transition-delay: .2s;
+} 
+
+.contentBx p {
+  color: white;
+  display: none;
+}
+

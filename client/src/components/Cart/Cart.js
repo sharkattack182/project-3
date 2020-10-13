@@ -5,12 +5,13 @@ import { TshirtList } from "../Tshirt/TshirtList";
 import API from "../../lib/API";
 import Modal from 'react-modal';
 import AuthContext from "../../contexts/AuthContext"
+import Swal from 'sweetalert2'
 
 
 export const Cart = (props) => {
   const [cart, cartDispatch] = useContext(CartContext);
   const [modal, setModal] = useState(false);
-  const {user, authToken} = useContext(AuthContext)
+  const { user, authToken } = useContext(AuthContext)
 
   const modifyCart = (id, amnt) => {
 
@@ -22,7 +23,7 @@ export const Cart = (props) => {
 
   const submitCart = () => {
     cartDispatch({
-        type: "SUBMIT_ORDER"
+      type: "SUBMIT_ORDER"
     })
   }
 
@@ -31,9 +32,9 @@ export const Cart = (props) => {
     // console.log(authToken);
     // console.log(cart)
     let productIdArray = [];
-    for (let i =0; i<cart.length; i++){
-      if(cart[i].quantity >1){
-        for(let x =0; x<cart[i].quantity; x++){
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].quantity > 1) {
+        for (let x = 0; x < cart[i].quantity; x++) {
           productIdArray.push(cart[i].id)
         }
       } else {
@@ -42,16 +43,24 @@ export const Cart = (props) => {
     }
     API.Orders.createOrder(productIdArray, authToken)
       .then(data => {
-       
+
         // alert("Order Created " + JSON.stringify(data[0].OrderId));
-        alert("order created " +  JSON.stringify(data.data[0][0].OrderId));
+        // alert("order created " +  JSON.stringify(data.data[0][0].OrderId));
+
+        Swal.fire({
+          title: "Order " +  JSON.stringify(data.data[0][0].OrderId) + " created successfully!" ,
+          text: 'Your order is being processed and will ship soon.',
+          icon: 'success',
+          confirmButtonText: 'Okay'
+        })
+
         console.log("order created", data.data[0]);
         submitCart();
 
       })
       .catch(err => {
         console.log(err)
-      }) 
+      })
     // cart.map(item => (
     //   console.log(item.id, item.quantity)
     // )
@@ -62,9 +71,9 @@ export const Cart = (props) => {
     //   .catch(err => {
     //     console.log(err)
     // //   })
-    
+
   }
-  
+
 
   return (
     <div>
@@ -74,17 +83,27 @@ export const Cart = (props) => {
       ) : (
           <div className="cart cart-header">
 
-            You have {cart.reduce((acc, curr) => acc + curr.quantity, 0)} item(s) in the cart{" "}
+            <h5>You have {cart.reduce((acc, curr) => acc + curr.quantity, 0)} item(s) in the cart{" "}</h5>
             {cart.map((item, i) => (
               <p key={i + '-key'}>
-               <span> <img src={item.image}/> {item.name} {item.quantity} x ${item.price.toFixed(2)}</span>
-                <button onClick={() => modifyCart(item.id, 1)}>
-                  <i className="fas fa-plus"></i>
-                </button>
-                <span> </span>
-                <button onClick={() => modifyCart(item.id, -1)} >
-                  <i className="fas fa-minus"></i>
-                </button>
+
+                <div className="item">
+                  <div className="image">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <div className="description">
+                    <span className="cartSpan">{item.name}</span>
+                  </div>
+                  <div className="quantity">
+                    <button onClick={() => modifyCart(item.id, 1)} className="plus-btn" type="button" name="button">
+                    <i className="fas fa-plus"></i>
+                    </button>
+                    <input className="plusMinus" type="text" name="name" value={item.quantity} />
+                    <button onClick={() => modifyCart(item.id, -1)} className="minus-btn" type="button" name="button">
+                    <i className="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
               </p>
             ))}
           </div>
@@ -120,4 +139,3 @@ export const Cart = (props) => {
     </div>
   )
 }
-
