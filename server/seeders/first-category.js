@@ -7,8 +7,8 @@ module.exports = {
       category_description: 'Personal Protective Equipment',
       category_img: 'https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png',
       createdAt: Sequelize.fn('NOW'),
-      updatedAt: Sequelize.fn('NOW'),
-    },
+      updatedAt: Sequelize.fn('NOW')
+    }
       // {
     //   category_name: 'Masks',
     //   category_description: 'We have a wide array of masks available for purchase. we carry, n95 respirator masks for medical personel. we also carry cdc recomended cloth face coverings as well as surgical masks are regulated under 21 cfr 878.4040.',

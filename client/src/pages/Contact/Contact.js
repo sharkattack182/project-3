@@ -13,13 +13,15 @@ function Contact() {
   const handleContact = (event) => {
     // event.preventDefault();
     console.log("submited")
-     
+    
+
     Swal.fire({
       title: "We're on it!",
       text: 'Our customer service team will reach back out to you shortly',
       icon: 'success',
       confirmButtonText: 'Okay'
     })
+    
   };
 
   return (
