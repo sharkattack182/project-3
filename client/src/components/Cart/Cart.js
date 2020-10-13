@@ -5,7 +5,8 @@ import { TshirtList } from "../Tshirt/TshirtList";
 import API from "../../lib/API";
 import Modal from 'react-modal';
 import AuthContext from "../../contexts/AuthContext"
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import './Cart.css'
 
 
 export const Cart = (props) => {
@@ -48,7 +49,7 @@ export const Cart = (props) => {
         // alert("order created " +  JSON.stringify(data.data[0][0].OrderId));
 
         Swal.fire({
-          title: "Order " +  JSON.stringify(data.data[0][0].OrderId) + " created successfully!" ,
+          title: "Order ID: UNCCEQUIP400" + JSON.stringify(data.data[0][0].OrderId) + '\n'   + " created successfully!",
           text: 'Your order is being processed and will ship soon.',
           icon: 'success',
           confirmButtonText: 'Okay'
@@ -89,53 +90,29 @@ export const Cart = (props) => {
 
                 <div className="item">
                   <div className="image">
-                    <img src={item.image} alt="" />
+                    <img className="image-max-height" src={item.image} alt="" />
                   </div>
                   <div className="description">
                     <span className="cartSpan">{item.name}</span>
                   </div>
                   <div className="quantity">
                     <button onClick={() => modifyCart(item.id, 1)} className="plus-btn" type="button" name="button">
-                    <i className="fas fa-plus"></i>
+                      <i className="fas fa-plus"></i>
                     </button>
                     <input className="plusMinus" type="text" name="name" value={item.quantity} />
                     <button onClick={() => modifyCart(item.id, -1)} className="minus-btn" type="button" name="button">
-                    <i className="fas fa-minus"></i>
+                      <i className="fas fa-minus"></i>
                     </button>
                   </div>
                 </div>
               </p>
             ))}
+            <span>Total price : ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>
+
+            <button onClick={handleCheckoutButton}>Checkout</button>
           </div>
         )}
       <br />
-      <span>Total price : ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>
-
-      <button onClick={handleCheckoutButton}>Checkout</button>
-      {/* added 10/10 5.08pm
-      <div>
-
-        <button onClick={() => setModal(true)}>Open Modal</button>
-        <Modal
-          isOpen={modal}
-          //   onAfterOpen={afterOpenModal}
-          onRequestClose={() => setModal(false)}
-          //   style={customStyles}
-          contentLabel="Example Modal"
-        >
-          <button onClick={() => setModal(false)}>close</button>
-          <div>Cart</div>
-          <p item={props.name}></p>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
-      </div> */}
-
     </div>
   )
 }

@@ -53,7 +53,7 @@ export const Tshirt = (props) => {
     return (
         <div className="card1">
             <div className="imgBx">
-                <img src={props.image} alt={props.name} />
+                <img className="image-max-height" src={props.image} alt={props.name} />
             </div>
             <div className="contentBx">
                 <h4 key={props.id}>{props.name}</h4>

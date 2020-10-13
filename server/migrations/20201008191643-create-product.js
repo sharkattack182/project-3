@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       product_img_one: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       product_img_two: {
         type: Sequelize.STRING

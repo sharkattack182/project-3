@@ -9,7 +9,8 @@ usersController.post('/', (req, res) => {
 
   db.User.create({ email, password, first, last, address, city, state, zip, country, phone })
     .then(user => res.json(user))
-    .catch(err => res.json(err));
+    .catch(err => res.json(err))
+    // alert("Email already in use");
 });
 
 usersController.get('/me', JWTVerifier, (req, res) => {
