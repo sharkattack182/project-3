@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import CSS from '../../pages/Contact/Contact.css'
 import Swal from 'sweetalert2'
 
+
 export default Contact;
 
 
@@ -12,16 +13,16 @@ function Contact() {
 
   const handleContact = (event) => {
     // event.preventDefault();
-    console.log("submited")
-    
+    // console.log("submitted");
+    // console.log(event.target.parentNode);
+    event.target.parentNode.reset(); 
 
     Swal.fire({
       title: "We're on it!",
       text: 'Our customer service team will reach back out to you shortly',
       icon: 'success',
       confirmButtonText: 'Okay'
-    })
-    
+    })  
   };
 
   return (
@@ -36,7 +37,7 @@ function Contact() {
 
       <Container>
         <div className="blue">
-          <Form className="formText">
+          <Form className="formText" id="form">
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>Email address:</Form.Label>
               <Form.Control type="email" placeholder="name@example.com" />

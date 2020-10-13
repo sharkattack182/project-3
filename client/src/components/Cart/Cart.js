@@ -96,6 +96,7 @@ export const Cart = (props) => {
                     <span className="cartSpan">{item.name}</span>
                   </div>
                   <div className="quantity">
+                  <div className="q">
                     <button onClick={() => modifyCart(item.id, 1)} className="plus-btn" type="button" name="button">
                       <i className="fas fa-plus"></i>
                     </button>
@@ -103,6 +104,7 @@ export const Cart = (props) => {
                     <button onClick={() => modifyCart(item.id, -1)} className="minus-btn" type="button" name="button">
                       <i className="fas fa-minus"></i>
                     </button>
+                    </div>
                   </div>
                 </div>
               </p>

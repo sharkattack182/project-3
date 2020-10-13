@@ -1,32 +1,34 @@
 .quantity input {
-    -webkit-appearance: none;
-    border: none;
+    /* -webkit-appearance: none; */
+    /* border: none; */
     text-align: center;
     width: 40px;
-    height: 30px;
+    height: 31px;
     font-size: 19px;
     color: #43484D;
     font-weight: 300;
-    padding-bottom: 1px !important;
+    padding-bottom: 2px !important;
   }
 
   .minus-btn{
     width: 30px;
-    height: 30px;
+    height: 31px;
     background-color: #E1E8EE;
     border-radius: 0px 6px 6px 0px !important;
     border: none;
     cursor: pointer;
     margin: 0 !important;
+    padding-bottom: 2px !important;
   }
 
   .plus-btn{
     width: 30px;
-    height: 30px;
+    height: 31px;
     background-color: #E1E8EE;
     border-radius: 6px 0px 0px 6px !important;
     border: none;
     cursor: pointer;
+    padding-bottom: 2px !important;
   }
 
   .description {
@@ -36,7 +38,7 @@
   }
    
   .description span {
-    display: block;
+    /* display: block; */
     font-size: 14px;
     color: #43484D;
     font-weight: 400;
@@ -57,12 +59,12 @@
   }
 
   .image,
-  .quantity,
   .description {
     width: 100%;
     text-align: center;
     margin: 6px 0;
   }
+
   .buttons {
     margin-right: 20px;
   }
