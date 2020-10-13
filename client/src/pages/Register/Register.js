@@ -15,17 +15,22 @@ class Register extends Component {
     }
 
     API.Users.create(email, password, first, last, address, city, state, zip, country, phone)
-      .then(response => response.data)
+      .then(response => {
+        this.setState({redirectToReferrer: true})
+        return response.data
+      })
+      // .then(response => 
+      //   response.data
+      // )
       .then(user => console.log(user))
-      
-      .catch(err => this.setState({ error: err.message }))
-      
+      .catch(err => this.setState({ error: err.message })) 
   }
 
   render() {
 
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
-    const { redirectToReferrer } = from;
+    const { from } = this.props.location.state || { from: { pathname: "/login" } };
+    // const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
       return <Redirect to={from} />;

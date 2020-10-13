@@ -6,6 +6,8 @@ import API from "../../lib/API";
 import Modal from 'react-modal';
 import AuthContext from "../../contexts/AuthContext"
 import Swal from 'sweetalert2'
+import CSS from './Cart.css'
+
 
 
 export const Cart = (props) => {
