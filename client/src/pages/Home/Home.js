@@ -16,7 +16,7 @@ class HomePage extends Component {
         <div className="jumbotron text-center">
 
         <h1>Welcome to EquiPPE <i class="fas fa-shield-virus"></i></h1>
-            <p className="mission max-width">Here at Equippe we strive to make live saving requipment easy to access. We assure our products are tested to the highest standards and are always available. During this uncertain time you can be certain that EquiPPE is here to ensure your saftey. Please browse our product types below. Please login or create an account to facilitate an order. </p>
+            <p className="mission max-width">Here at Equippe we strive to make life saving equipment easy to access. We assure our products are tested to the highest standards and are always in stock. During this unprecedented time you can be certain that EquiPPE is here to ensure your saftey. Please browse our product types below and login or create an account to facilitate an order. </p>
         </div>
         <Row>
           <Col lg={10} className="center max-width">
@@ -28,7 +28,7 @@ class HomePage extends Component {
             <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title title"><strong className="orange">Masks</strong></h5>
-                <p className="card-text">We have a wide array of masks available for purchase. We carry, N95 respirator masks for medical personel. We also carry CDC recomended cloth face coverings as well as surgical masks are regulated under 21 CFR 878.4040.</p>
+                <p className="card-text">We have a wide array of masks available for purchase. We carry N95 respirator masks for medical personnel. We also carry CDC recommended cloth face coverings as well as surgical masks that are regulated under 21 CFR 878.4040.</p>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ class HomePage extends Component {
             <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title title"><strong className="orange">Gloves</strong></h5>
-                <p className="card-text text">EquiPPE has you "covered" when it comes to gloves. We off a variety of products. We have surgical grade latex gloves as well as non latex options available. All products are in complience with Regulation 2016/425</p>
+                <p className="card-text text">EquiPPE has you "covered" when it comes to gloves. We offer a variety of products. We have surgical grade latex gloves as well as non latex options available. All products are in compliance with Regulation 2016/425</p>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@ class HomePage extends Component {
             <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title title"><strong className="orange">Hygeine Products</strong></h5>
-                <p className="card-text">Everything you need to survive the COVID-19 pandemic. We keep a steady supply of hand sanitizer, cleaning solutions and sterilization products. Everything from wipes to sprays. </p>
+                <p className="card-text">Everything you need to survive the COVID-19 pandemic. We maintain a steady supply of hand sanitizer, cleaning solutions, and sterilization products. Everything from wipes to sprays. </p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ class HomePage extends Component {
             <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title title"><strong className="orange">Supplies</strong></h5>
-                <p className="card-text text">While these items may not be PPE, here at EquiPPE we realize that this pandemic has created a demand for supplies that was unforeseen in the market. As such we have decided to produce some of the harder-to-get materials necessary for the pandemic.</p>
+                <p className="card-text text">While these items may not be PPE, here at EquiPPE we realize that the pandemic has created a demand for supplies that was unforeseen in the market. As such we have decided to produce some of the harder-to-get materials necessary for the pandemic.</p>
               </div>
             </div>
           </div>

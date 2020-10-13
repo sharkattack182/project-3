@@ -5,7 +5,7 @@ import { TshirtList } from "../Tshirt/TshirtList";
 import API from "../../lib/API";
 import Modal from 'react-modal';
 import AuthContext from "../../contexts/AuthContext"
-import CSS from './Cart.css'
+import Swal from 'sweetalert2'
 
 
 export const Cart = (props) => {
@@ -45,7 +45,15 @@ export const Cart = (props) => {
       .then(data => {
 
         // alert("Order Created " + JSON.stringify(data[0].OrderId));
-        alert("order created " + JSON.stringify(data.data[0][0].OrderId));
+        // alert("order created " +  JSON.stringify(data.data[0][0].OrderId));
+
+        Swal.fire({
+          title: "Order " +  JSON.stringify(data.data[0][0].OrderId) + " created successfully!" ,
+          text: 'Your order is being processed and will ship soon.',
+          icon: 'success',
+          confirmButtonText: 'Okay'
+        })
+
         console.log("order created", data.data[0]);
         submitCart();
 
