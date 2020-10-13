@@ -23,7 +23,7 @@ module.exports = {
 {
     product_name: 'Hand Sanitizer',
     product_description: 'Etyhl Alcohol one bottle',
-    product_img_one: 'https://lh3.googleusercontent.com/proxy/dWuu-h5h4oX4QOqTuex6_VsD9RESJPQdS4M4zfvPrBgxcbdKDpCE8KxGxe9Hklthcm_KKPdOLttiITfzv1LAEOS97nhZmYTF0z5mPfwAPDPaUpFSeXEIfKOTzHWeIebKSb5ut6EBVw',
+    product_img_one: 'https://lh3.googleusercontent.com/proxy/5QmEhFT7vNXehAe7Yy5i0IYRgDITzPJ4nf0HpG96jHSe0Vy5IP1eKCOuMPNetL0zzu99b_Yec-BCJEcG57mSXzo8W1TyhjJ2ndeHHz80iUxdai93mQ9Z07STkAzY2O1Z',
     price: 7.99,
     stock: 1000,
     createdAt: Sequelize.fn('NOW'),
