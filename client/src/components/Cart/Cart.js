@@ -5,11 +5,7 @@ import { TshirtList } from "../Tshirt/TshirtList";
 import API from "../../lib/API";
 import Modal from 'react-modal';
 import AuthContext from "../../contexts/AuthContext"
-<<<<<<< HEAD
 import Swal from 'sweetalert2'
-=======
-import CSS from './Cart.css'
->>>>>>> 833d4f6d2eec148c627eea95f577ba992856b20a
 
 
 export const Cart = (props) => {
