@@ -51,7 +51,7 @@ module.exports = {
 {
     product_name: 'Hand Sanitizer',
     product_description: 'Purrell 10z Bottle',
-    product_img_one: 'https://lh3.googleusercontent.com/proxy/to69AxVQ9KvSEhrjTZ6WoS4xC8h3fjk5fLusfKwgxtRCZElRS87WZUY4H7g9W43FGtrpoDMoibczNQ1gxeAoMzj2eonFJqKvZQi56ymgT-s9qloHuXo8s7Iwb0NZi82H',
+    product_img_one: 'https://lh3.googleusercontent.com/proxy/EUE3jsf4JuxhKRbLSCwRNxRCbTr_CiSUI05YcvjKHfAnnuJHfVxPXCXGyxw4M5GIV-D5x2IzmrJ_odyi4jYMcLUnoKCahF_3elz31DFD2j4e1s13iN0zVpsgYy0M9ONB',
     price: 7.99,
     stock: 1000,
     createdAt: Sequelize.fn('NOW'),
