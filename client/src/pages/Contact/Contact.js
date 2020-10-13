@@ -26,15 +26,15 @@ function Contact() {
 
 
     <>
-      <div className="jumbotron text-left">
-
+      <div className="jumbotron text-center">
+        <h1 class="testimonials">Contact <i class="far fa-envelope"></i></h1>
 
       </div>
-      <h2 class="testimonials">Contact <i class="far fa-envelope"></i></h2>
+     
 
       <Container>
         <div className="blue">
-          <Form className="trust">
+          <Form className="formText">
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>Email address:</Form.Label>
               <Form.Control type="email" placeholder="name@example.com" />
