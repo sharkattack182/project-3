@@ -50,7 +50,7 @@ class Shop extends Component {
 
         <div className="jumbotron text-center">
         <h1>Our Products <i class="fas fa-shield-virus"></i></h1>
-            <p className="trust max-width">Please browse our exclusive products below. Just press checkout whenever youre done shopping. </p>
+            <p className="trust max-width">Please browse our exclusive products below. Just press checkout whenever you're done shopping. </p>
         </div>
 
         <CartProvider>

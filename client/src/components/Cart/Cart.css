@@ -52,7 +52,12 @@
   .image img {
     width: 50%;
   }
-  
+
+  .image-max-height{
+    max-height: 225px !important;
+    width: auto !important;
+  }
+
   .image,
   .description {
     width: 100%;
