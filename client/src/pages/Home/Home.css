@@ -1,5 +1,5 @@
 .mission {
-    color: #aaa9a9cb !important;
+    color: #5e5e5ecb;
     margin-left: auto;
     margin-right: auto;
     padding-left: 100px;
@@ -8,7 +8,9 @@
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
-h1 {
+.jumbotron h1 {
+    position: relative;
+    top: 300px;
     font-size: 70px;
     color: #011586;
     margin-left: auto;
@@ -21,5 +23,39 @@ h1 i {
     color:  #ec8430;
 }
 
+
+.jumbotron p {
+    position: relative;
+    top: 300px;
+}
 /* Card */
 
+/* .card-title {
+    font-size: 150px !important;
+    margin-top: 80px;
+    color: #aaa9a9cb !important;
+    text-shadow: 2px 2px #000;
+} */
+
+.homeCard1 .orange {
+    font-size: 50px !important;
+}
+
+.homeCard .orange {
+    font-size: 50px !important;
+}
+
+.max-width {
+    max-width: 1500px;
+}
+.homeCard {
+    min-height: 354px !important;
+}
+
+.homeCard img {
+    min-height: 345px;
+}
+
+.margin-top {
+    margin-top: 50px;
+}

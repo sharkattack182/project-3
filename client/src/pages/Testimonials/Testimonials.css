@@ -30,6 +30,7 @@
     border-color: #c0c0c0cb;
     border-width: 5px;
     border-style: solid;
+    margin-top: 50px !important;
     margin-bottom: 50px !important;
 }
 .card4 p:first-letter{
@@ -127,7 +128,9 @@ font-variant: small-caps;
 
 .trust {
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-    color:  #c0c0c0cb;
+    color:  #5e5e5ecb;
     font-size: 40px;
     margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
