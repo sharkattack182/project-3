@@ -6,8 +6,9 @@ import API from "../../lib/API";
 import Modal from 'react-modal';
 import AuthContext from "../../contexts/AuthContext"
 import Swal from 'sweetalert2';
-import './Cart.css'
-
+import './Cart.css';
+import Fade from 'react-reveal/Fade';
+import Zoom from "react-reveal/Zoom";
 
 export const Cart = (props) => {
   const [cart, cartDispatch] = useContext(CartContext);
@@ -83,7 +84,7 @@ export const Cart = (props) => {
         <div className="cart cart-header">Cart is empty</div>
       ) : (
           <div className="cart cart-header">
-
+            <Fade left cascade>
             <h5>You have {cart.reduce((acc, curr) => acc + curr.quantity, 0)} item(s) in the cart{" "}</h5>
             {cart.map((item, i) => (
               <p key={i + '-key'}>
@@ -109,6 +110,7 @@ export const Cart = (props) => {
                 </div>
               </p>
             ))}
+            </Fade>
             <span>Total price : ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>
 
             <button onClick={handleCheckoutButton}>Checkout</button>
