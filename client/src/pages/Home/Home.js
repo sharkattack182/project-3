@@ -61,7 +61,7 @@ class HomePage extends Component {
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <h5 className="card-title title"><strong className="orange">Hygeine Products</strong></h5>
+                <h5 className="card-title title"><strong className="orange">Hygiene Products</strong></h5>
                 <p className="card-text">Everything you need to survive the COVID-19 pandemic. We maintain a steady supply of hand sanitizer, cleaning solutions, and sterilization products. Everything from wipes to sprays. </p>
               </div>
             </div>
