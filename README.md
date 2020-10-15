@@ -24,6 +24,7 @@ The Equippe application allows users to view an online store of PPE (personal pr
     * MySQL
     * React
     * Sweet Alert
+    * React-Reveal
  
 ## License
     This project is covered by the MIT license.
